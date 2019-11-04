@@ -1,3 +1,21 @@
 .nav {
   grid-area: n;
+  padding: 20px;
+}
+
+.item {
+  margin-bottom: 7px;
+}
+
+.itemLink {
+  text-decoration: none;
+  color: grey;
+}
+
+.itemLink:hover {
+  color: #333333;
+}
+
+.activeLink {
+  color: black;
 }
