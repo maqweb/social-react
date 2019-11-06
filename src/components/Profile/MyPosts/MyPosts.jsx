@@ -2,14 +2,9 @@ import React from 'react';
 import Post from './Post/Post';
 import style from './MyPosts.module.css';
 
-const MyPosts = () => {
+const MyPosts = (props) => {
 
-  let posts = [
-    { id: 1, message: 'Hello React!', likesCount: 23 },
-    { id: 1, message: 'It\'s nice work', likesCount: 11 },
-  ];
-
-  let postsElement = posts.map( p => <Post message={p.message} likesCount={p.likesCount}/>);
+  let postsElement = props.posts.map( p => <Post message={p.message} likesCount={p.likesCount}/>);
 
   return (
     <div className={style.postWrap}>
