@@ -4,8 +4,8 @@ import style from './MyPosts.module.css';
 
 const MyPosts = () => {
   return (
-    <div>
-      My posts
+    <div className={style.postWrap}>
+      <h3>My posts</h3>
         <div>
           <textarea></textarea>
           <button>Add post</button>
