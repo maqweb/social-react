@@ -1,1 +1,7 @@
 .postWrap {
+    padding: 0 20px;
+}
+
+.posts {
+    margin-top: 10px;
+}
