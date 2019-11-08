@@ -2,6 +2,10 @@
     padding: 0 20px;
 }
 
+.postTitle {
+    margin-top: 0;
+}
+
 .posts {
     margin-top: 10px;
 }
