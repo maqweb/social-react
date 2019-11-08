@@ -1,21 +1,58 @@
-.nav {
-  grid-area: n;
-  padding: 20px;
+.navWrap {
+    grid-area: n;
+    padding: 20px;
+    border-right: 1px solid lavender;
 }
 
 .item {
-  margin-bottom: 7px;
+    margin-bottom: 7px;
 }
 
 .itemLink {
-  text-decoration: none;
-  color: grey;
+    text-decoration: none;
+    color: grey;
 }
 
 .itemLink:hover {
-  color: #333333;
+    color: #333333;
 }
 
 .activeLink {
-  color: black;
+    color: black;
+}
+
+.friendsBlock {
+    margin-top: 50px;
+    color: grey;
+}
+
+.friendsTitle {
+    margin-bottom: 15px;
+}
+
+.friendPic {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.friendPic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+.friendName {
+    font-size: 12px;
+}
+
+.friendWrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.friendItemWrap {
+    width: fit-content;
+    text-align: center;
 }
