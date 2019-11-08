@@ -6,6 +6,7 @@ let state = {
             { id: 1, message: 'Awesome!', likesCount: 7 }
         ]
     },
+
     dialogPage: {
         dialogsData: [
             { id: 1, name: 'Empty'},
@@ -18,7 +19,17 @@ let state = {
             { id: 2, message: 'Nice work!' },
             { id: 3, message: 'Let\'s do it!' }
         ]
+    },
+
+    navBar: {
+        friends: [
+            { firstName: 'Empty', secondName: 'Qaz' },
+            { firstName: 'Asdf', secondName: 'Qwer' },
+            { firstName: 'Mdn', secondName: 'Zxc' },
+            { firstName: 'Vbn', secondName: 'Rty' }
+        ]
     }
+
 };
 
 export default  state;

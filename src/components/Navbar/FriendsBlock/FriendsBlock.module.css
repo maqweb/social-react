@@ -7,28 +7,8 @@
     margin-bottom: 15px;
 }
 
-.friendPic {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 5px;
-}
-
-.friendPic img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-
-.friendName {
-    font-size: 12px;
-}
-
 .friendWrap {
     display: flex;
     justify-content: space-between;
-}
-
-.friendItemWrap {
-    width: fit-content;
-    text-align: center;
+    flex-wrap: wrap;
 }
