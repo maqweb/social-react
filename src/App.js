@@ -8,15 +8,16 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
+import {addPost} from "./redux/state";
 
 const App = (props) => {
-    debugger;
     return (
         <div className="mainWrap">
             <Header/>
             <Navbar state={props.state.navBar}/>
             <div className="content">
-                <Route path='/profile' render={() => <Profile state={props.state.profilePage}/>}/>
+                <Route path='/profile' render={() => <Profile state={props.state.profilePage}
+                                                              addPost={addPost}/>}/>
                 <Route path='/dialogs' render={() => <Dialogs state={props.state.dialogPage}/>}/>
                 <Route path='/news' component={News}/>
                 <Route path='/music' component={Music}/>

@@ -4,7 +4,6 @@ import style from './Navbar.module.css';
 import FriendsBlock from "./FriendsBlock/FriendsBlock";
 
 const Navbar = (props) => {
-    // debugger;
     return (
         <div className={style.navWrap}>
             <nav className={style.nav}>

@@ -23,13 +23,23 @@ let state = {
 
     navBar: {
         friends: [
-            { firstName: 'Empty', secondName: 'Qaz' },
-            { firstName: 'Asdf', secondName: 'Qwer' },
-            { firstName: 'Mdn', secondName: 'Zxc' },
-            { firstName: 'Vbn', secondName: 'Rty' }
+            { firstName: 'Empty', secondName: 'Jhon' },
+            { firstName: 'Marry', secondName: 'Marry' },
+            { firstName: 'Empty', secondName: 'Bill' },
+            { firstName: 'Clint', secondName: 'Eastwood' }
         ]
     }
+};
 
+export let addPost = (postMessage) => {
+    debugger;
+    let newPost = {
+        id: 5,
+        message: postMessage,
+        likesCount: 0
+    };
+    state.profilePage.posts.push(newPost);
+    console.log(state.profilePage);
 };
 
 export default  state;
