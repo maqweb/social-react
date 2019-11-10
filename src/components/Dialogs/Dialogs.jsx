@@ -4,7 +4,7 @@ import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 
 const Dialogs = (props) => {
-    
+
     let dialogsElements = props.state.dialogsData.map( d => <DialogItem name={d.name} id={d.id}/>);
     let messagesElements = props.state.messagesData.map( m => <Message message={m.message} id={m.id}/>);
 
@@ -22,7 +22,7 @@ const Dialogs = (props) => {
             </div>
             <div className={style.messages}>
                 { messagesElements }
-                <textarea ref={newMessage}></textarea>
+                <textarea ref={newMessage}/>
                 <button onClick={ addMessage }>Add message</button>
             </div>
         </div>

@@ -18,7 +18,7 @@ const MyPosts = (props) => {
         <div className={style.postWrap}>
             <h3 className={style.postTitle}>My posts</h3>
             <div>
-                <textarea ref={newPostElement}></textarea>
+                <textarea ref={newPostElement} value="learn React"/>
                 <button onClick={addPost}> Add post</button>
             </div>
 
