@@ -1,6 +1,7 @@
 // import {rerenderEntireTree} from "../render";
 let rerenderEntireTree = () => {
-    console.log('state changed');
+    console.log(state);
+    console.log(state.profilePage.newPostText);
 };
 
 let state = {
@@ -24,7 +25,8 @@ let state = {
             {id: 1, message: 'Hello React'},
             {id: 2, message: 'Nice work!'},
             {id: 3, message: 'Let\'s do it!'}
-        ]
+        ],
+        newMessageText: 'New Message'
     },
 
     navBar: {
@@ -52,6 +54,21 @@ export const addPost = () => {
 
 export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+};
+
+export const addMessage = () => {
+    let newMessage = {
+        id: state.dialogPage.messagesData.length + 1,
+        message: state.dialogPage.newMessageText
+    };
+    state.dialogPage.messagesData.push(newMessage);
+    state.dialogPage.newMessageText = '';
+    rerenderEntireTree(state);
+};
+
+export const updateNewMessageText = (newText) => {
+    state.dialogPage.newMessageText = newText;
     rerenderEntireTree(state);
 };
 

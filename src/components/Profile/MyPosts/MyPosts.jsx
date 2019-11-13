@@ -20,7 +20,10 @@ const MyPosts = (props) => {
         <div className={style.postWrap}>
             <h3 className={style.postTitle}>My posts</h3>
             <div>
-                <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText}/>
+                <textarea ref={newPostElement}
+                          onChange={onPostChange}
+                          value={props.newPostText}/>
+
                 <button onClick={addPost}> Add post</button>
             </div>
 
