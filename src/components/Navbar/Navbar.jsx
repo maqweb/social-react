@@ -27,7 +27,7 @@ const Navbar = (props) => {
                 </div>
             </nav>
 
-            <FriendsBlock state={props.state}/>
+            <FriendsBlock friends={props.navBar.friends} dispatch={props.dispatch}/>
         </div>
     )
 };

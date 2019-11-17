@@ -10,10 +10,11 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 
 const App = (props) => {
+
     return (
         <div className="mainWrap">
             <Header/>
-            <Navbar state={props.state.navBar}/>
+            <Navbar navBar={props.state.navBar} dispatch={props.dispatch}/>
             <div className="content">
                 <Route path='/profile' render={() => <Profile profilePage={props.state.profilePage}
                                                               dispatch={props.dispatch} />} />
