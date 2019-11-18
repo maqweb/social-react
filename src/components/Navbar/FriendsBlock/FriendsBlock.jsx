@@ -3,7 +3,7 @@ import style from "./FriendsBlock.module.css";
 import FriendItem from "./FriendItem/FriendItem";
 
 const FriendsBlock = (props) => {
-    
+
     let friendElement = props.friends.map(f => <FriendItem firstName={f.firstName} secondName={f.secondName}/>);
 
     return (

@@ -25,7 +25,7 @@ let store = {
                 {id: 2, message: 'Nice work!'},
                 {id: 3, message: 'Let\'s do it!'}
             ],
-            newMessageText: 'New Message'
+            newMessageText: ''
         },
 
         navBar: {
