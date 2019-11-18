@@ -1,10 +1,12 @@
 let initialState = {
-    friends: [
-        {firstName: 'Empty', secondName: 'Jhon'},
-        {firstName: 'Marry', secondName: 'Marry'},
-        {firstName: 'Empty', secondName: 'Bill'},
-        {firstName: 'Clint', secondName: 'Eastwood'}
-    ]
+    navBar: {
+        friends: [
+            {firstName: 'Empty', secondName: 'Jhon'},
+            {firstName: 'Marry', secondName: 'Marry'},
+            {firstName: 'Empty', secondName: 'Bill'},
+            {firstName: 'Clint', secondName: 'Eastwood'}
+        ]
+    }
 };
 
 const navbarReducer = (state = initialState, action) => {

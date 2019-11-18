@@ -26,10 +26,12 @@ const Navbar = (props) => {
                              to="/settings">Settings</NavLink>
                 </div>
             </nav>
-
-            <FriendsBlock friends={props.navBar.friends} dispatch={props.dispatch}/>
         </div>
     )
 };
 
 export default Navbar;
+
+
+
+{/*<FriendsBlock friends={props.navBar.friends} dispatch={props.dispatch}/>*/}
