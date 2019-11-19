@@ -3,8 +3,8 @@ import style from "./FriendsBlock.module.css";
 import FriendItem from "./FriendItem/FriendItem";
 
 const FriendsBlock = (props) => {
-
-    let friendElement = props.friends.map(f => <FriendItem firstName={f.firstName} secondName={f.secondName}/>);
+    debugger;
+    let friendElement = props.state.navBar.friends.map(f => <FriendItem firstName={f.firstName} secondName={f.secondName}/>);
 
     return (
         <div className={style.friendsBlock}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import style from './Navbar.module.css';
-import FriendsBlock from "./FriendsBlock/FriendsBlock";
+import FriendsBlockContainer from "./FriendsBlock/FriendsBlockContainer";
 
 const Navbar = (props) => {
     return (
@@ -26,12 +26,11 @@ const Navbar = (props) => {
                              to="/settings">Settings</NavLink>
                 </div>
             </nav>
+
+            <FriendsBlockContainer/>
         </div>
     )
 };
 
 export default Navbar;
 
-
-
-{/*<FriendsBlock friends={props.navBar.friends} dispatch={props.dispatch}/>*/}
