@@ -1,21 +1,26 @@
 import React from "react";
-import style from "./FriendsBlock.module.css";
-import FriendItem from "./FriendItem/FriendItem";
-import StoreContext from "../../../StoreContext";
 import FriendsBlock from "./FriendsBlock";
+import {connect} from "react-redux";
 
-const FriendsBlockContainer = () => {
+// const FriendsBlockContainer = () => {
+//
+//     return <StoreContext.Consumer>
+//         {
+//             (store) => {
+//
+//                 let state = store.getState();
+//                 return <FriendsBlock state={state.navBar}/>
+//             }
+//         }
+//     </StoreContext.Consumer>
+// };
 
-    return <StoreContext.Consumer>
-        {
-            (store) => {
-
-                let state = store.getState();
-
-                return <FriendsBlock state={state.navBar}/>
-            }
-        }
-    </StoreContext.Consumer>
+let mapStateToProps = (state) => {
+    return (
+        state: state.navBar
+    );
 };
+
+const FriendsBlockContainer = connect(mapStateToProps)(FriendsBlock);
 
 export default FriendsBlockContainer;

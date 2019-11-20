@@ -4,7 +4,7 @@ import FriendItem from "./FriendItem/FriendItem";
 
 const FriendsBlock = (props) => {
     debugger;
-    let friendElement = props.state.navBar.friends.map(f => <FriendItem firstName={f.firstName} secondName={f.secondName}/>);
+    let friendElement = props.navBar.friends.map(f => <FriendItem firstName={f.firstName} secondName={f.secondName}/>);
 
     return (
         <div className={style.friendsBlock}>
