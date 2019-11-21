@@ -7,8 +7,9 @@ const Dialogs = (props) => {
 
     let state = props.dialogsPage;
 
-    let dialogsElements = state.dialogsData.map(d => <DialogItem name={d.name} id={d.id}/>);
-    let messagesElements = state.messagesData.map(m => <Message message={m.message} id={m.id}/>);
+    let dialogsElements = state.dialogsData.map(d => <DialogItem name={d.name} id={d.id} key={d.id}/>);
+    let messagesElements = state.messagesData.map(m => <Message message={m.message} id={m.id} key={m.id}/>);
+    // let newMessageText = state.NewMessageText;
 
     let newMessage = React.createRef();
 
@@ -16,8 +17,8 @@ const Dialogs = (props) => {
         props.addMessage();
     };
 
-    let onMessageChange = () => {
-        let text = newMessage.current.value;
+    let onMessageChange = (e) => {
+        let text = e.target.value;
         props.updateNewMessageText(text);
     };
 
