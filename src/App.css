@@ -9,3 +9,9 @@
 .content {
     grid-area: c;
 }
+
+.loader {
+    background: #cccccc;
+    display: flex;
+    justify-content: center;
+}
