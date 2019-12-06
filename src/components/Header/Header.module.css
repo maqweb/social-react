@@ -8,3 +8,11 @@
   margin-top: 7px;
   margin-left: 15px;
 }
+
+.loginBlock {
+  float: right;
+}
+
+.loginLink {
+  color: black;
+}
