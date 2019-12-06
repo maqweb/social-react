@@ -1,6 +1,8 @@
 import React from 'react';
 import style from "../Profile.module.css";
 import Preloader from "../../common/preloader/Preloader";
+import checkmark from '../../../assets/images/tick.png';
+import cancel from '../../../assets/images/cancel.png'
 
 const ProfileInfo = (props) => {
 
@@ -17,7 +19,20 @@ const ProfileInfo = (props) => {
             </div>
             <div className={style.description}>
                 <img src={props.profile.photos.large}/>
-                ava + description
+                <div>About me: {props.profile.aboutMe}</div>
+
+                <div className={style.jobLooking}>
+                    <span>Lookin for a job</span>
+                    {props.profile.lookingForAJob ?
+                        <img className={style.jobIcon} src={checkmark}/> :
+                        <img className={style.jobIcon} src={cancel}/>}
+                </div>
+
+                <div>
+                    <span>Full Name: {props.profile.fullName}</span>
+                </div>
+
+                <div>ava + description</div>
             </div>
         </div>
     )

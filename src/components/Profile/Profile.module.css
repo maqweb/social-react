@@ -5,3 +5,13 @@
 .description {
     padding: 20px;
 }
+
+.jobLooking {
+    display: flex;
+    align-items: center;
+}
+
+.jobIcon {
+    width: 20px;
+    margin-left: 10px;
+}
