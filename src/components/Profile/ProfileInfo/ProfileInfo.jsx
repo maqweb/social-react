@@ -18,14 +18,14 @@ const ProfileInfo = (props) => {
                      alt=""/>
             </div>
             <div className={style.description}>
-                <img src={props.profile.photos.large}/>
+                <img alt="" src={props.profile.photos.large}/>
                 <div>About me: {props.profile.aboutMe}</div>
 
                 <div className={style.jobLooking}>
                     <span>Lookin for a job</span>
                     {props.profile.lookingForAJob ?
-                        <img className={style.jobIcon} src={checkmark}/> :
-                        <img className={style.jobIcon} src={cancel}/>}
+                        <img alt="" className={style.jobIcon} src={checkmark}/> :
+                        <img alt="" className={style.jobIcon} src={cancel}/>}
                 </div>
 
                 <div>
