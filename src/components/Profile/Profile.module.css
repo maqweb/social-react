@@ -1,17 +1,21 @@
 .img {
-    width: 100%;
+  width: 100%;
 }
 
 .description {
-    padding: 20px;
+  padding: 20px;
 }
 
 .jobLooking {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .jobIcon {
-    width: 20px;
-    margin-left: 10px;
+  width: 20px;
+  margin-left: 10px;
+}
+
+.fullName {
+  margin-bottom: 15px;
 }

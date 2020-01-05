@@ -3,6 +3,7 @@ import style from "../Profile.module.css";
 import Preloader from "../../common/preloader/Preloader";
 import checkmark from '../../../assets/images/tick.png';
 import cancel from '../../../assets/images/cancel.png'
+import ProfileStatus from './ProfileStatus'
 
 const ProfileInfo = (props) => {
 
@@ -12,11 +13,11 @@ const ProfileInfo = (props) => {
 
     return (
         <div>
-            <div>
-                <img className={style.img}
-                     src="https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                     alt=""/>
-            </div>
+            {/*<div>*/}
+            {/*    <img className={style.img}*/}
+            {/*         src="https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"*/}
+            {/*         alt=""/>*/}
+            {/*</div>*/}
             <div className={style.description}>
                 <img alt="" src={props.profile.photos.large}/>
                 <div>About me: {props.profile.aboutMe}</div>
@@ -28,11 +29,13 @@ const ProfileInfo = (props) => {
                         <img alt="" className={style.jobIcon} src={cancel}/>}
                 </div>
 
-                <div>
+
+
+                <div className={style.fullName}>
                     <span>Full Name: {props.profile.fullName}</span>
                 </div>
 
-                <div>ava + description</div>
+                <ProfileStatus status={'Hello React!'}/>
             </div>
         </div>
     )
