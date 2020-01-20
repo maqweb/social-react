@@ -12,19 +12,16 @@ let Users = (props) => {
     }
 
     return (
-        (
+        <div>
             <div>
-                <div>
-                    {pages.map(p => {
-                        return <button onClick={() => {
-                            props.onPageChanged(p)
-                        }}
-                                       className={props.currentPage === p && style.selectedPage}>{p}</button>
-                    })}
-                </div>
-                {
-                    props.users.map(u => (
-                        <div key={u.id}>
+                {pages.map(p => {
+                    return <button onClick={() => {
+                        props.onPageChanged(p)
+                    }} className={props.currentPage === p ? style.selectedPage : null}>{p}</button>
+                })}
+            </div>
+            {props.users.map(u => (
+                <div key={u.id}>
                     <span>
                         <div>
                             <NavLink to={'/profile/' + u.id}>
@@ -47,7 +44,7 @@ let Users = (props) => {
                                 }}>Follow</button>}
                         </div>
                     </span>
-                            <span>
+                    <span>
                         <span>
                             <div>{u.name}</div>
                             <div>{u.status}</div>
@@ -57,10 +54,9 @@ let Users = (props) => {
                             <div>{"u.location.country"}</div>
                         </span>
                     </span>
-                        </div>
-                    ))}
-            </div>
-        )
+                </div>
+            ))}
+        </div>
     )
 };
 

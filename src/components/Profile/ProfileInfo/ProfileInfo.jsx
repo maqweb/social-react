@@ -30,12 +30,11 @@ const ProfileInfo = (props) => {
                 </div>
 
 
-
                 <div className={style.fullName}>
                     <span>Full Name: {props.profile.fullName}</span>
                 </div>
 
-                <ProfileStatus status={'Hello React!'}/>
+                <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
             </div>
         </div>
     )
