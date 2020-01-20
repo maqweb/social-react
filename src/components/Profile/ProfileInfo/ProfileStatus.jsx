@@ -1,4 +1,5 @@
 import React from "react";
+import './../../../App.css'
 
 class ProfileStatus extends React.Component {
 
@@ -22,10 +23,10 @@ class ProfileStatus extends React.Component {
 
     render() {
         return (
-                <div><span>status:</span>
+                <div className="styleStatus"><span>status:</span>
                     {!this.state.editMode
                             ? <div>
-                                <span onDoubleClick={this.activateEditMode}> {this.props.status}</span>
+                                <span onDoubleClick={this.activateEditMode}> {this.props.status || '----'}</span>
                             </div>
                             : <div>
                                 <input autoFocus={true}
