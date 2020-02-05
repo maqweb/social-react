@@ -5,6 +5,7 @@ import {Input} from "../common/FormsControls/FormsControls";
 import {connect} from "react-redux";
 import {login} from "../../redux/auth-reducer";
 import {Redirect} from "react-router-dom";
+import style from './../common/FormsControls/FormsControls.module.css'
 // import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
 
 const LoginForm = (props) => {
@@ -28,6 +29,11 @@ const LoginForm = (props) => {
                        name={'rememberMe'}
                        component={Input}/> <span>Remember me</span>
             </div>
+
+            { props.error && <div className={style.formError}>
+                {props.error}
+            </div> }
+
             <div>
                 <button>Login</button>
             </div>
@@ -44,7 +50,7 @@ const Login = (props) => {
     };
 
     if (props.isAuth) {
-        return <Redirect to={"/profile"} />
+        return <Redirect to={"/profile"}/>
     }
 
     return (
