@@ -1,3 +1,7 @@
+.loginWrap {
+    padding: 0 20px;
+}
+
 .formControl.error input,
 .formControl.error textarea {
     border: 2px solid red;

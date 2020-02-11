@@ -54,7 +54,7 @@ const Login = (props) => {
     }
 
     return (
-        <div>
+        <div className={style.loginWrap}>
             <h1>Login</h1>
             <LoginReduxForm onSubmit={onSubmit}/>
         </div>

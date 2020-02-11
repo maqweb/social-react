@@ -6,7 +6,6 @@ import cancel from '../../../assets/images/cancel.png'
 import ProfileStatus from './ProfileStatus'
 
 const ProfileInfo = (props) => {
-
     if (!props.profile) {
         return <Preloader/>
     }
