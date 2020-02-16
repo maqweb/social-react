@@ -3,7 +3,8 @@ import style from "../Profile.module.css";
 import Preloader from "../../common/preloader/Preloader";
 import checkmark from '../../../assets/images/tick.png';
 import cancel from '../../../assets/images/cancel.png'
-import ProfileStatus from './ProfileStatus'
+// import ProfileStatus from './ProfileStatus'
+import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const ProfileInfo = (props) => {
     if (!props.profile) {
@@ -28,7 +29,7 @@ const ProfileInfo = (props) => {
                     <span>Full Name: {props.profile.fullName}</span>
                 </div>
 
-                <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+                <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
             </div>
         </div>
     )
