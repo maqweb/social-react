@@ -6,25 +6,26 @@ import {connect} from "react-redux";
 import {login} from "../../redux/auth-reducer";
 import {Redirect} from "react-router-dom";
 import style from './../common/FormsControls/FormsControls.module.css'
+import styles from './Login.module.css'
 // import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
 
 const LoginForm = (props) => {
     return (
-        <form onSubmit={props.handleSubmit}>
-            <div>
+        <form onSubmit={props.handleSubmit} className={styles.loginForm}>
+            <div className={styles.loginInput}>
                 <Field placeholder={"Email"}
                        name={'email'}
                        component={Input}
                        validate={[required]}/>
             </div>
-            <div>
+            <div className={styles.loginInput}>
                 <Field placeholder={"Password"}
                        type={"password"}
                        name={'password'}
                        component={Input}
                        validate={[required]}/>
             </div>
-            <div>
+            <div className={styles.rememberBlock}>
                 <Field type={"checkbox"}
                        name={'rememberMe'}
                        component={Input}/> <span>Remember me</span>
@@ -54,7 +55,7 @@ const Login = (props) => {
     }
 
     return (
-        <div className={style.loginWrap}>
+        <div className={styles.loginWrap}>
             <h1>Login</h1>
             <LoginReduxForm onSubmit={onSubmit}/>
         </div>

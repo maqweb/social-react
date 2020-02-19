@@ -1,7 +1,7 @@
 .navWrap {
     grid-area: n;
     padding: 20px;
-    border-right: 1px solid lightgray;
+    border-right: 1px solid #EDEEF0;
 }
 
 .item {

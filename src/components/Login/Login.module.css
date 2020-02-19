@@ -1,3 +1,39 @@
 .loginWrap {
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.loginForm{
+    width: 300px;
+    height: 200px;
+    background: white;
+    padding: 40px 40px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.loginInput {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.loginInput input{
+    width: 100%;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.rememberBlock {
+    display: flex;
+    align-self: flex-start;
+    margin-bottom: 20px;
 }

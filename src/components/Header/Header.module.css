@@ -1,6 +1,6 @@
 .header {
     grid-area: h;
-    background: #fafafa;
+    background: #4A76A8;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,5 +17,6 @@
 }
 
 .loginLink {
-    color: black;
+    color: white;
+    text-decoration: none;
 }
