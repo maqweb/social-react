@@ -1,18 +1,21 @@
 .header {
-  grid-area: h;
-  background: #fafafa;
+    grid-area: h;
+    background: #fafafa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-  width: 50px;
-  margin-top: 7px;
-  margin-left: 15px;
+    width: 50px;
+    margin-top: 7px;
+    margin-left: 15px;
 }
 
 .loginBlock {
-  float: right;
+    margin-right: 10px;
 }
 
 .loginLink {
-  color: black;
+    color: black;
 }
