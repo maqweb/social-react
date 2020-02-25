@@ -1,39 +1,34 @@
 import React from "react";
-import {Field, reduxForm} from "redux-form";
+import {reduxForm} from "redux-form";
 import {required} from "../../utils/validators/validators";
-import {Input} from "../common/FormsControls/FormsControls";
+import {createField, Input} from "../common/FormsControls/FormsControls";
 import {connect} from "react-redux";
 import {login} from "../../redux/auth-reducer";
 import {Redirect} from "react-router-dom";
 import style from './../common/FormsControls/FormsControls.module.css'
 import styles from './Login.module.css'
-// import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
 
-const LoginForm = (props) => {
+const LoginForm = ({handleSubmit, error}) => {
     return (
-        <form onSubmit={props.handleSubmit} className={styles.loginForm}>
+        <form onSubmit={handleSubmit} className={styles.loginForm}>
             <div className={styles.loginInput}>
-                <Field placeholder={"Email"}
-                       name={'email'}
-                       component={Input}
-                       validate={[required]}/>
-            </div>
-            <div className={styles.loginInput}>
-                <Field placeholder={"Password"}
-                       type={"password"}
-                       name={'password'}
-                       component={Input}
-                       validate={[required]}/>
-            </div>
-            <div className={styles.rememberBlock}>
-                <Field type={"checkbox"}
-                       name={'rememberMe'}
-                       component={Input}/> <span>Remember me</span>
+                {createField('Email', 'email', Input, [required])}
             </div>
 
-            { props.error && <div className={style.formError}>
-                {props.error}
-            </div> }
+            <div className={styles.loginInput}>
+                {createField('Password', 'password', Input, [required], {type: 'password'})}
+            </div>
+
+            <div>
+                <label className={styles.rememberBlock}>
+                    {createField(null, 'rememberMe', Input, [], {type: 'checkbox'})}
+                    <span>Remember me</span>
+                </label>
+            </div>
+
+            {error && <div className={style.formError}>
+                {error}
+            </div>}
 
             <div>
                 <button>Login</button>

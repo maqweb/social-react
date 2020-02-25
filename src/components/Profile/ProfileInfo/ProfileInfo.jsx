@@ -3,33 +3,32 @@ import style from "../Profile.module.css";
 import Preloader from "../../common/preloader/Preloader";
 import checkmark from '../../../assets/images/tick.png';
 import cancel from '../../../assets/images/cancel.png'
-// import ProfileStatus from './ProfileStatus'
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
-const ProfileInfo = (props) => {
+const ProfileInfo = ({profile, status, updateStatus}) => {
 
-    if (!props.profile) {
+    if (!profile) {
         return <Preloader/>
     }
 
     return (
         <div>
             <div className={style.description}>
-                <img alt="" src={props.profile.photos.large}/>
-                <div>About me: {props.profile.aboutMe}</div>
+                <img alt="" src={profile.photos.large}/>
+                <div>About me: {profile.aboutMe}</div>
 
                 <div className={style.jobLooking}>
                     <span>Lookin for a job</span>
-                    {props.profile.lookingForAJob ?
+                    {profile.lookingForAJob ?
                         <img alt="" className={style.jobIcon} src={checkmark}/> :
                         <img alt="" className={style.jobIcon} src={cancel}/>}
                 </div>
 
                 <div className={style.fullName}>
-                    <span>Full Name: {props.profile.fullName}</span>
+                    <span>Full Name: {profile.fullName}</span>
                 </div>
 
-                <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
+                <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
             </div>
         </div>
     )

@@ -1,4 +1,4 @@
-const ADD_MESSAGE = 'ADD-MESSAGE';
+const ADD_MESSAGE = 'dialogsReducer/ADD_MESSAGE';
 
 let initialState = {
     dialogsData: [
