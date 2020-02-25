@@ -7,6 +7,7 @@ import cancel from '../../../assets/images/cancel.png'
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const ProfileInfo = (props) => {
+
     if (!props.profile) {
         return <Preloader/>
     }
@@ -23,7 +24,6 @@ const ProfileInfo = (props) => {
                         <img alt="" className={style.jobIcon} src={checkmark}/> :
                         <img alt="" className={style.jobIcon} src={cancel}/>}
                 </div>
-
 
                 <div className={style.fullName}>
                     <span>Full Name: {props.profile.fullName}</span>
