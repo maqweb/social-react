@@ -1,11 +1,17 @@
 import React from 'react';
 import style from './Header.module.css';
 import {NavLink} from "react-router-dom";
+import logo from './../../assets/images/logo.svg'
+import logoRedux from './../../assets/images/Redux.svg'
 
 const Header = (props) => {
     return (
         <header className={style.header}>
-            <img className={style.logo} src="https://www.clker.com/cliparts/N/0/4/q/4/R/react-redux.svg" alt=""/>
+
+            <div className={style.logoBlock}>
+                <img className={style.logo} src={logo} alt=""/>
+                <img className={style.logoRedux} src={logoRedux} alt=""/>
+            </div>
 
             <div className={style.loginBlock}>
                 {
