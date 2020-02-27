@@ -10,7 +10,6 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
     if (!profile) {
         return <Preloader/>
     }
-
     return (
         <div>
             <div className={style.description}>

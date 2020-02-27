@@ -63,12 +63,12 @@ export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 export const setStatus = (status) => ({type: SET_STATUS, status});
 
 export const getUserProfile = (userId) => async (dispatch) => {
-    let response = await usersAPI.getProfile(userId)
+    let response = await usersAPI.getProfile(userId);
     dispatch(setUserProfile(response.data));
 };
 
 export const getStatus = (userId) => async (dispatch) => {
-    let response = await profileAPI.getStatus(userId)
+    let response = await profileAPI.getStatus(userId);
     dispatch(setStatus(response.data));
 };
 

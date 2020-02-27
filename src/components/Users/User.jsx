@@ -4,7 +4,6 @@ import userPhoto from "../../assets/images/user1.png";
 import {NavLink} from "react-router-dom";
 
 let User = ({user, followingInProgress, unfollow, follow}) => {
-
     return (
         <div>
                     <span>
@@ -34,10 +33,10 @@ let User = ({user, followingInProgress, unfollow, follow}) => {
                             <div>{user.name}</div>
                             <div>{user.status}</div>
                         </span>
-                        <span>
-                            <div>{"user.location.city"}</div>
-                            <div>{"user.location.country"}</div>
-                        </span>
+                        {/*<span>
+                            <div>{user.location.city}</div>
+                            <div>{user.location.country}</div>
+                        </span>*/}
                     </span>
         </div>
 

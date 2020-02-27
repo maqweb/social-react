@@ -5,9 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
-import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./components/Login/Login";
 import {connect, Provider} from "react-redux";
@@ -15,6 +13,13 @@ import {compose} from "redux";
 import {intializeApp} from "./redux/app-reducer";
 import Preloader from "./components/common/preloader/Preloader";
 import store from "./redux/redux-store";
+import {withSuspense} from "./hoc/WithSuspense";
+
+// import DialogsContainer from "./components/Dialogs/DialogsContainer";
+const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
+// import ProfileContainer from "./components/Profile/ProfileContainer";
+const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
+
 
 class App extends React.Component<{}> {
 
@@ -35,10 +40,10 @@ class App extends React.Component<{}> {
                 <div className="content">
 
                     <Route path='/profile/:userId?'
-                           render={() => <ProfileContainer/>}/>
+                           render={withSuspense(ProfileContainer)}/>
 
                     <Route path='/dialogs'
-                           render={() => <DialogsContainer/>}/>
+                           render={withSuspense(DialogsContainer)}/>
 
                     <Route path='/news' component={News}/>
                     <Route path='/music' component={Music}/>
@@ -63,13 +68,13 @@ const mapStateToProps = (state) => ({
 let AppContainer = compose(withRouter, connect(mapStateToProps, {intializeApp}))(App);
 
 let MainApp = (props) => {
-  return (
-      <BrowserRouter>
-          <Provider store={store}>
-              <AppContainer/>
-          </Provider>
-      </BrowserRouter>
-  )
+    return (
+        <BrowserRouter>
+            <Provider store={store}>
+                <AppContainer/>
+            </Provider>
+        </BrowserRouter>
+    )
 };
 
 export default MainApp;

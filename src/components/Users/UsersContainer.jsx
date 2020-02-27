@@ -17,6 +17,7 @@ import {
     getTotalUsersCount, getUsers
 } from "../../redux/users-selectors";
 
+
 class UsersContainer extends React.Component {
 
     componentDidMount(): void {
@@ -34,7 +35,7 @@ class UsersContainer extends React.Component {
         return <>
             {this.props.isFetching ?
                 <Preloader/> : null}
-            <Users totalUsersCount={this.props.totalUsersCount}
+            <Users totalItemsCount={this.props.totalUsersCount}
                    pageSize={this.props.pageSize}
                    currentPage={this.props.currentPage}
                    onPageChanged={this.onPageChanged}
