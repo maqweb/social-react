@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/social-react/static/css/main.881ca1c2.chunk.css",
+    "main.js": "/social-react/static/js/main.bdac5036.chunk.js",
+    "main.js.map": "/social-react/static/js/main.bdac5036.chunk.js.map",
+    "runtime-main.js": "/social-react/static/js/runtime-main.f9111c1c.js",
+    "runtime-main.js.map": "/social-react/static/js/runtime-main.f9111c1c.js.map",
+    "static/js/2.c66ec28a.chunk.js": "/social-react/static/js/2.c66ec28a.chunk.js",
+    "static/js/2.c66ec28a.chunk.js.map": "/social-react/static/js/2.c66ec28a.chunk.js.map",
+    "static/css/3.1c5a508e.chunk.css": "/social-react/static/css/3.1c5a508e.chunk.css",
+    "static/js/3.576d22b7.chunk.js": "/social-react/static/js/3.576d22b7.chunk.js",
+    "static/js/3.576d22b7.chunk.js.map": "/social-react/static/js/3.576d22b7.chunk.js.map",
+    "static/css/4.cc4a99b2.chunk.css": "/social-react/static/css/4.cc4a99b2.chunk.css",
+    "static/js/4.f1ddfb5d.chunk.js": "/social-react/static/js/4.f1ddfb5d.chunk.js",
+    "static/js/4.f1ddfb5d.chunk.js.map": "/social-react/static/js/4.f1ddfb5d.chunk.js.map",
+    "index.html": "/social-react/index.html",
+    "precache-manifest.e505eada86a4974dcaba76137b72b21c.js": "/social-react/precache-manifest.e505eada86a4974dcaba76137b72b21c.js",
+    "service-worker.js": "/social-react/service-worker.js",
+    "static/css/3.1c5a508e.chunk.css.map": "/social-react/static/css/3.1c5a508e.chunk.css.map",
+    "static/css/4.cc4a99b2.chunk.css.map": "/social-react/static/css/4.cc4a99b2.chunk.css.map",
+    "static/css/main.881ca1c2.chunk.css.map": "/social-react/static/css/main.881ca1c2.chunk.css.map",
+    "static/js/2.c66ec28a.chunk.js.LICENSE": "/social-react/static/js/2.c66ec28a.chunk.js.LICENSE",
+    "static/media/Redux.svg": "/social-react/static/media/Redux.dc081a33.svg",
+    "static/media/bars.svg": "/social-react/static/media/bars.ca49bba4.svg",
+    "static/media/cancel.png": "/social-react/static/media/cancel.4ace9687.png",
+    "static/media/logo.svg": "/social-react/static/media/logo.5d5d9eef.svg",
+    "static/media/user1.png": "/social-react/static/media/user1.3bd15153.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f9111c1c.js",
+    "static/js/2.c66ec28a.chunk.js",
+    "static/css/main.881ca1c2.chunk.css",
+    "static/js/main.bdac5036.chunk.js"
+  ]
+}
