@@ -1,34 +1,76 @@
-import React from 'react';
+import React, {useState} from 'react';
 import style from "../Profile.module.css";
 import Preloader from "../../common/preloader/Preloader";
-import checkmark from '../../../assets/images/tick.png';
-import cancel from '../../../assets/images/cancel.png'
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
+import ProfileDataForm from "./ProfileDataForm";
 
-const ProfileInfo = ({profile, status, updateStatus}) => {
+const ProfileInfo = ({profile, status, updateStatus, isOwner, saveProfile}) => {
+
+    let [editMode, setEditMode] = useState(false);
 
     if (!profile) {
         return <Preloader/>
     }
+
+    const onSubmit = (formData) => {
+        saveProfile(formData).then(() => {
+            setEditMode(false)
+        })
+    };
+
     return (
         <div>
             <div className={style.description}>
                 <img alt="" src={profile.photos.large}/>
-                <div>About me: {profile.aboutMe}</div>
-
-                <div className={style.jobLooking}>
-                    <span>Lookin for a job:</span>
-                    {profile.lookingForAJob ?
-                        <img alt="" className={style.jobIcon} src={checkmark}/> :
-                        <img alt="" className={style.jobIcon} src={cancel}/>}
-                </div>
-
-                <div className={style.fullName}>
-                    <span>Full Name: {profile.fullName}</span>
-                </div>
+                {isOwner && <input type={'file'}/>}
 
                 <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
+
+                {editMode
+                    ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>
+                    : <ProfileData profile={profile} isOwner={isOwner} goToEditMode={() => setEditMode(true)}/>}
+
             </div>
+        </div>
+    )
+};
+
+const ProfileData = ({profile, isOwner, goToEditMode}) => {
+    return (
+        <div>
+            {isOwner && <div>
+                <button onClick={goToEditMode}>Edit</button>
+            </div>}
+            <div className={style.fullName}>
+                <span><b>Full name:</b>{profile.fullName}</span>
+            </div>
+
+            <div>
+                <b>Lookin for a job:</b>{profile.lookingForAJob ? 'Yes' : 'No'}
+            </div>
+
+            <div>
+                <b>My professional skills</b>{profile.lookingForAJobDescription}
+            </div>
+
+            <div>
+                <b>About me:</b>{profile.aboutMe}
+            </div>
+
+            <div>
+                <b>Contacts:</b>{Object.keys(profile.contacts).map(key => {
+                return <Contacts key={key} contactTitle={key} contactValue={profile.contacts[key]}/>
+            })}
+            </div>
+        </div>
+    )
+};
+
+
+const Contacts = ({contactTitle, contactValue}) => {
+    return (
+        <div className={style.contacts}>
+            <b>{contactTitle}:</b> {contactValue}
         </div>
     )
 };
