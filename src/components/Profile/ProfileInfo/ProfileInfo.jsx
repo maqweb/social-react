@@ -17,7 +17,7 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
                 <div>About me: {profile.aboutMe}</div>
 
                 <div className={style.jobLooking}>
-                    <span>Lookin for a job</span>
+                    <span>Lookin for a job:</span>
                     {profile.lookingForAJob ?
                         <img alt="" className={style.jobIcon} src={checkmark}/> :
                         <img alt="" className={style.jobIcon} src={cancel}/>}
