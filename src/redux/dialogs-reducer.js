@@ -11,7 +11,8 @@ let initialState = {
         {id: 1, message: 'Hello React'},
         {id: 2, message: 'Nice work!'},
         {id: 3, message: 'Let\'s do it!'}
-    ]
+    ],
+    value: '123'
 };
 
 const dialogsReducer = (state = initialState, action) => {
@@ -22,7 +23,7 @@ const dialogsReducer = (state = initialState, action) => {
             let text = action.newMessageBody;
             return {
                 ...state,
-                messagesData: [...state.messagesData, {id: state.messagesData.length + 1, message: text }]
+                messagesData: [...state.messagesData, {id: state.messagesData.length + 1, message: text }],
             };
         }
 

@@ -8,7 +8,6 @@ import {Textarea} from "../common/FormsControls/FormsControls";
 import {maxLengthCreator, required} from "../../utils/validators/validators";
 
 const Dialogs = (props) => {
-
     let state = props.dialogsPage;
 
     let dialogsElements = state.dialogsData.map(d => <DialogItem name={d.name} id={d.id} key={d.id}/>);
@@ -21,6 +20,8 @@ const Dialogs = (props) => {
     if (!props.isAuth) {
         return <Redirect to={'/login'}/>
     }
+
+
 
     return (
         <div className={style.dialogs}>
@@ -44,7 +45,6 @@ const AddMessageForm = (props) => {
             <div>
                 <Field component={Textarea}
                        name='newMessageBody'
-                       value={props.inputValue}
                        placeholder='Enter your message'
                        validate={[required, maxLength50]}/>
             </div>
