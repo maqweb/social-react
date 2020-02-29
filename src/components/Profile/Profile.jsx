@@ -8,6 +8,7 @@ const Profile = (props) => {
             <ProfileInfo profile={props.profile}
                          status={props.status}
                          isOwner={props.isOwner}
+                         savePhoto={props.savePhoto}
                          saveProfile={props.saveProfile}
                          updateStatus={props.updateStatus}/>
 

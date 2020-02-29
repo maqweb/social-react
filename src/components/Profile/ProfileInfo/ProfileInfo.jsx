@@ -3,14 +3,22 @@ import style from "../Profile.module.css";
 import Preloader from "../../common/preloader/Preloader";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import ProfileDataForm from "./ProfileDataForm";
+import userPhoto from "../../../assets/images/user1.png";
 
-const ProfileInfo = ({profile, status, updateStatus, isOwner, saveProfile}) => {
+const ProfileInfo = ({profile, status, updateStatus, isOwner, saveProfile, savePhoto}) => {
 
     let [editMode, setEditMode] = useState(false);
 
     if (!profile) {
         return <Preloader/>
     }
+
+    const onMainPhotoSelected = (e) => {
+        debugger
+        if (e.target.files.length) {
+            savePhoto(e.target.files[0])
+        }
+    };
 
     const onSubmit = (formData) => {
         saveProfile(formData).then(() => {
@@ -21,8 +29,8 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, saveProfile}) => {
     return (
         <div>
             <div className={style.description}>
-                <img alt="" src={profile.photos.large}/>
-                {isOwner && <input type={'file'}/>}
+                <img className={style.profilePhoto} alt="" src={profile.photos.large || userPhoto}/>
+                {isOwner && <input type={"file"} onChange={onMainPhotoSelected}/>}
 
                 <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
 
