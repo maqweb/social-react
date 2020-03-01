@@ -8,7 +8,7 @@ class ProfileStatus extends React.Component {
         status: this.props.status
     };
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps: Readonly<P>, prevState: Readonly<S>, snapshot: SS): void {
         if (prevProps.status !== this.props.status) {
             this.setState({
                 status: this.props.status
@@ -31,21 +31,20 @@ class ProfileStatus extends React.Component {
 
     render() {
         return (
-                <div className="styleStatus"><p>status:</p>
-                    {!this.state.editMode &&
-                             <div>
-                                <span onDoubleClick={this.activateEditMode}>{this.props.status || '----'}</span>
-                            </div>}
+            <div className="styleStatus"><p>status:</p>
+                {!this.state.editMode &&
+                <div>
+                    <span onDoubleClick={this.activateEditMode}>{this.props.status || '----'}</span>
+                </div>}
 
-                    {this.state.editMode && <div>
-                                <input autoFocus={true}
-                                       onChange={this.onStatusChange}
-                                       onBlur={this.deactivateEditMode}
-                                       value={this.state.status}/>
-                            </div>
-                    }
+                {this.state.editMode && <div>
+                    <input autoFocus={true}
+                           onChange={this.onStatusChange}
+                           onBlur={this.deactivateEditMode}
+                           value={this.state.status}/>
+                </div>}
 
-                </div>
+            </div>
         )
     }
 }
