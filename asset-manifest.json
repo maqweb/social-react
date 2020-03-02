@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/social-react/static/css/main.1e735f33.chunk.css",
+    "main.css": "/social-react/static/css/main.b8966883.chunk.css",
     "main.js": "/social-react/static/js/main.cfa2df2d.chunk.js",
     "main.js.map": "/social-react/static/js/main.cfa2df2d.chunk.js.map",
     "runtime-main.js": "/social-react/static/js/runtime-main.cb45dcd2.js",
@@ -14,11 +14,11 @@
     "static/js/4.99c6a439.chunk.js": "/social-react/static/js/4.99c6a439.chunk.js",
     "static/js/4.99c6a439.chunk.js.map": "/social-react/static/js/4.99c6a439.chunk.js.map",
     "index.html": "/social-react/index.html",
-    "precache-manifest.2b1ea586e44e2e8186362fac4750c2b7.js": "/social-react/precache-manifest.2b1ea586e44e2e8186362fac4750c2b7.js",
+    "precache-manifest.0dbfb3adb43786179eda8d7471ee3be3.js": "/social-react/precache-manifest.0dbfb3adb43786179eda8d7471ee3be3.js",
     "service-worker.js": "/social-react/service-worker.js",
     "static/css/3.f7700957.chunk.css.map": "/social-react/static/css/3.f7700957.chunk.css.map",
     "static/css/4.25f0f072.chunk.css.map": "/social-react/static/css/4.25f0f072.chunk.css.map",
-    "static/css/main.1e735f33.chunk.css.map": "/social-react/static/css/main.1e735f33.chunk.css.map",
+    "static/css/main.b8966883.chunk.css.map": "/social-react/static/css/main.b8966883.chunk.css.map",
     "static/js/2.3e059228.chunk.js.LICENSE": "/social-react/static/js/2.3e059228.chunk.js.LICENSE",
     "static/media/Redux.svg": "/social-react/static/media/Redux.dc081a33.svg",
     "static/media/bars.svg": "/social-react/static/media/bars.ca49bba4.svg",
@@ -28,7 +28,7 @@
   "entrypoints": [
     "static/js/runtime-main.cb45dcd2.js",
     "static/js/2.3e059228.chunk.js",
-    "static/css/main.1e735f33.chunk.css",
+    "static/css/main.b8966883.chunk.css",
     "static/js/main.cfa2df2d.chunk.js"
   ]
 }
