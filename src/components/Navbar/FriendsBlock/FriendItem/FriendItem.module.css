@@ -15,10 +15,10 @@
 }
 
 .friendItemWrap {
-    width: 45px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
     margin-bottom: 10px;
     text-align: center;
 }

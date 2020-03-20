@@ -28,11 +28,13 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, saveProfile, saveP
     return (
         <div>
             <div className={style.description}>
-                <img className={style.profilePhoto} alt="" src={profile.photos.large || userPhoto}/>
-                {isOwner && <input type={"file"} onChange={onMainPhotoSelected}/>}
+                <div>
+                    <h2 className={style.fullName}>{profile.fullName}</h2>
+                    <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
 
-                <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
-
+                    <img className={style.profilePhoto} alt="" src={profile.photos.large || userPhoto}/>
+                    {isOwner && <input type={"file"} onChange={onMainPhotoSelected}/>}
+                </div>
                 {editMode
                     ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>
                     : <ProfileData profile={profile} isOwner={isOwner} goToEditMode={() => setEditMode(true)}/>}
@@ -48,10 +50,6 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
             {isOwner && <div>
                 <button onClick={goToEditMode}>Edit</button>
             </div>}
-            <div className={style.fullName}>
-                <span><b>Full name:</b>{profile.fullName}</span>
-            </div>
-
             <div>
                 <b>Lookin for a job:</b>{profile.lookingForAJob ? 'Yes' : 'No'}
             </div>

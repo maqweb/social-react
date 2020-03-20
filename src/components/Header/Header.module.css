@@ -1,9 +1,16 @@
 .header {
     grid-area: h;
     background: #2F3337;
+    position: fixed;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
 }
 
 .logoBlock {
@@ -38,11 +45,9 @@
 }
 
 .logoRedux {
-    width: 40px;
-    position: absolute;
+    width: 36px;
     z-index: 2;
-    top: 12px;
-    left: 31px;
+    margin-bottom: 4px;
 }
 
 .loginBlock {

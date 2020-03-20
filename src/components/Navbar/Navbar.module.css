@@ -1,14 +1,26 @@
 .navWrap {
     grid-area: n;
     padding: 20px;
-    border-right: 1px solid #EDEEF0;
+    position: fixed;
+    top: 10vh;
+    /*height: 100%;*/
+    width: 200px;
+}
+
+.nav{
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px #ccc;
 }
 
 .item {
-    margin-bottom: 7px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
 }
 
 .itemLink {
+    font-size: 14px;
     text-decoration: none;
     color: grey;
 }
@@ -21,3 +33,69 @@
     color: black;
 }
 
+
+@media screen and (max-width: 1150px) {
+    .navWrap {
+        width: 170px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .navWrap {
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .navWrap {
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    .navWrap {
+        width: 120px;
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .navWrap {
+        width: 100px;
+        padding: 20px 10px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 550px) {
+    .navWrap {
+        width: 90px;
+        padding: 20px 0;
+    }
+
+    .itemLink {
+        font-size: 10px;
+    }
+}
+
+
+@media (min-width: 450px) and (max-width: 500px) {
+    .navWrap {
+        width: 90px;
+        padding: 20px 0;
+    }
+
+    .itemLink {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 450px) {
+    .navWrap {
+        width: 75px;
+        padding: 20px 0;
+    }
+
+    .itemLink {
+        font-size: 10px;
+    }
+}

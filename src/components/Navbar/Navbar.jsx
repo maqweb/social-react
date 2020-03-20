@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import style from './Navbar.module.css';
-import FriendsBlockContainer from "./FriendsBlock/FriendsBlockContainer";
+// import FriendsBlockContainer from "./FriendsBlock/FriendsBlockContainer";
 
 const Navbar = (props) => {
     return (
@@ -16,6 +16,11 @@ const Navbar = (props) => {
                              to="/dialogs">Messages</NavLink>
                 </div>
                 <div className={style.item}>
+                    <NavLink className={style.itemLink} activeClassName={style.activeLink}
+                             to="/users">Users</NavLink>
+                </div>
+
+                {/*<div className={style.item}>
                     <NavLink className={style.itemLink} activeClassName={style.activeLink} to="/news">News</NavLink>
                 </div>
                 <div className={style.item}>
@@ -24,14 +29,11 @@ const Navbar = (props) => {
                 <div className={style.item}>
                     <NavLink className={style.itemLink} activeClassName={style.activeLink}
                              to="/settings">Settings</NavLink>
-                </div>
-                <div className={style.item}>
-                    <NavLink className={style.itemLink} activeClassName={style.activeLink}
-                             to="/users">Users</NavLink>
-                </div>
+                </div>*/}
+
             </nav>
 
-            <FriendsBlockContainer/>
+            {/*<FriendsBlockContainer/>*/}
         </div>
     )
 };

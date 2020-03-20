@@ -1,9 +1,20 @@
+.profile {
+  height: 100%;
+}
+
 .img {
   width: 100%;
 }
 
 .description {
   padding: 20px;
+  background: white;
+  margin: 20px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px #ccc;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .jobLooking {
